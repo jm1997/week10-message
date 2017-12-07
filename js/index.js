@@ -101,7 +101,7 @@ function createNotification() {
     //
     var currentTime = new Date().getTime(); //current time
     
-    var notificationTime = new Date(currentTime + 1000); //calculate notification time
+   // var notificationTime = new Date(currentTime + 1000); //calculate notification time
     			
     //
     //setup notification
