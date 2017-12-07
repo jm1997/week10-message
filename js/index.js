@@ -64,10 +64,7 @@ function foodNotification() {
     //setup notification
     //
 
-    
-    if(currentTime<notificationTime){
-        var currentTime = new Date().getTime(); // update current time
-    }      
+     
     if(currentTime==notificationTime)
     {          
         cordova.plugins.notification.local.schedule({ 
@@ -82,15 +79,10 @@ function foodNotification() {
        
 
 
-
-
-
-
-
 function dialogDismissed(buttonIndex) {
 	
 	if(buttonIndex==1) {
-        new Toast({content: "Have a break and get some food :)", duration: 4000});
+        new Toast({content: "Have a break and get some food :)", duration: 2000});
         
         foodNotification();
     }
