@@ -14,7 +14,6 @@ $(document).on('pageinit', function() {
 		createDialog();
 	});
 
-
 	$('#notificationButton').on('click', function() {
 		createNotification();
 	});
@@ -64,9 +63,7 @@ function foodNotification() {
     //setup notification
     //
 
-     
-    if(currentTime==notificationTime)
-    {          
+    
         cordova.plugins.notification.local.schedule({ 
             id: 		1,
             title: 		"Hey you!",
@@ -75,7 +72,6 @@ function foodNotification() {
             badge: 		notification_count++
         });     
      }
-}
        
 
 
@@ -92,8 +88,6 @@ function dialogDismissed(buttonIndex) {
 
 }
 
-   
-   
 function createNotification() {
         		
 	//
@@ -101,7 +95,8 @@ function createNotification() {
     //
     var currentTime = new Date().getTime(); //current time
     
-   // var notificationTime = new Date(currentTime + 1000); //calculate notification time
+    
+    var notificationTime = new Date(currentTime + 1000); //calculate notification time
     			
     //
     //setup notification
