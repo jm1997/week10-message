@@ -51,7 +51,7 @@ function createDialog() {
 
 }
         	
-  function foodNotification() {
+function foodNotification() {
         		
 	//
     //generate a time to post notification
@@ -63,19 +63,26 @@ function createDialog() {
     //
     //setup notification
     //
-
-    cordova.plugins.notification.local.schedule({ 
-    	id: 		1,
-        title: 		"Hey you!",
-        message: 	"Get back to work!",
-        date: 		notificationTime, 
-        badge: 		notification_count++
-   	});      	
+    
+    if(currentTime<notificationTime){
+        var currentTime = new Date().getTime(); // update current time
+    }      
+    if(currentTime==notificationTime)
+    {          
+        cordova.plugins.notification.local.schedule({ 
+            id: 		1,
+            title: 		"Hey you!",
+            message: 	"Get back to work! >:(",
+            date: 		notificationTime, 
+            badge: 		notification_count++
+        });     
+     }
+}
         	
 function dialogDismissed(buttonIndex) {
 	
 	if(buttonIndex==1) {
-        new Toast({content: "Have a break and get some food!", duration: 4000});
+        new Toast({content: "Have a break and get some food :)", duration: 4000});
         
         foodNotification();
     }
