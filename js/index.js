@@ -58,11 +58,12 @@ function foodNotification() {
     //
     var currentTime = new Date().getTime(); //current time
     
-    var notificationTime = new Date(currentTime + 30000); //calculate notification time
+    var notificationTime = new Date(currentTime + 3000); //calculate notification time
     			
     //
     //setup notification
     //
+
     
     if(currentTime<notificationTime){
         var currentTime = new Date().getTime(); // update current time
@@ -78,7 +79,14 @@ function foodNotification() {
         });     
      }
 }
-        	
+       
+
+
+
+
+
+
+
 function dialogDismissed(buttonIndex) {
 	
 	if(buttonIndex==1) {
