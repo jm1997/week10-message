@@ -5,6 +5,10 @@ $(document).on('pageinit', function() {
 	$('#messageButton').on('click', function() {
 		createMessage();
 	});
+    
+    $('#messageButton2').on('click', function() {
+		createMessage2();
+	});
 	
 	$('#dialogButton').on('click', function() {
 		createDialog();
@@ -23,7 +27,13 @@ $(document).on('pageinit', function() {
 function createMessage(){		
 	//phoneGap and jQueryMobile do not support toast messages directly
     //so we can add this using toast.js
-    new Toast({content: 'An example message.', duration: 1000}); 	
+    new Toast({content: 'An example message.', duration: 3000}); 		
+}
+
+function createMessage2(){		
+	//phoneGap and jQueryMobile do not support toast messages directly
+    //so we can add this using toast.js
+    new Toast({content: 'An example message2.', duration: 3000}); 		
 }
         	
 
